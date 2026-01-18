@@ -26,6 +26,13 @@ export const Navbar = () => {
 		setOpen(newOpen);
 	};
 
+	const handleLinkClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
 	const DrawerList = (
 		<Box
 			sx={{ width: 250 }}
@@ -82,7 +89,7 @@ export const Navbar = () => {
 			<div className="navBarDiv">
 				<img src="/dharmika_logo.svg" alt="logo" />
 				<div className="links">
-					<Link to="/">Home</Link>
+					<Link to="/" onClick={handleLinkClick}>Home</Link>
 					<Link to="/Products">Products</Link>
 					<Link to="/About">About</Link>
 					<h1>DHARMIKA SPICES</h1>
@@ -100,7 +107,9 @@ export const Navbar = () => {
 				</div>
 				<Box>
 
+				<Link to='/' onClick={handleLinkClick}>
 				<Typography variant="h6" sx={{fontFamily: 'serif'}}>DHARMIKA</Typography>
+				</Link>
 				</Box>
 				<div>
 					<a style={{color:'#075e54'}} href="https://wa.me/c/171868115980526" target="_blank" rel="noreferrer">Shop Now</a>
@@ -174,8 +183,8 @@ const NavBar = styled.nav`
 		background-size: cover;
 		background-attachment: fixed;
 		background: rgba(150, 150, 150, 0.1); /* semi-transparent */
-		backdrop-filter: blur(1px);
-		-webkit-backdrop-filter: blur(5px); /* Safari */
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
 	}
 
 	.mobileLogo {
