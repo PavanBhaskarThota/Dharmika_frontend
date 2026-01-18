@@ -4,7 +4,6 @@ import { AllRoutes } from "./Routes/AllRoutes"
 import spicesBg from "./assets/spices_bg.png"
 import spicesMobileBg from "./assets/spices_mobile_bg2.png"
 
-
 export const App = ()=>{
 
   return (
@@ -16,7 +15,7 @@ export const App = ()=>{
 }
 
 const DIV = styled.div`
-  min-height: 200vh;
+  min-height: 100vh;
   background-color: #F5FBE6;
   /* background-image: url(${spicesBg}); */
   background-repeat: no-repeat;

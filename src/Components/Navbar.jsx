@@ -9,6 +9,7 @@ import {
 	ListItemText,
 	ListItemIcon,
 	Divider,
+	Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
@@ -96,8 +97,11 @@ export const Navbar = () => {
 			<div className="mobileNavBar">
 				<div className="mobileLogo">
 					<MenuIcon onClick={toggleDrawer(true)} sx={{fontSize: "2rem"}} />
-					<img src="/dharmika_logo.svg" alt="logo" />
 				</div>
+				<Box>
+
+				<Typography variant="h6" sx={{fontFamily: 'serif'}}>DHARMIKA</Typography>
+				</Box>
 				<div>
 					<a style={{color:'#075e54'}} href="https://wa.me/c/171868115980526" target="_blank" rel="noreferrer">Shop Now</a>
 				</div>
@@ -130,8 +134,8 @@ const NavBar = styled.nav`
 		background-attachment: fixed;
 
 		background: rgba(150, 150, 150, 0.1); /* semi-transparent */
-		backdrop-filter: blur(1px);
-		-webkit-backdrop-filter: blur(5px);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
 	}
 
 	.links{
@@ -141,6 +145,14 @@ const NavBar = styled.nav`
 	}
 
 	h1{
+		margin: 0px;
+		padding: 0px;
+		font-family: serif;
+		font-weight: 400;
+		padding: 0px 1.5rem;
+	}
+
+	h4{
 		margin: 0px;
 		padding: 0px;
 		font-family: serif;
