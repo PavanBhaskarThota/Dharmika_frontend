@@ -7,7 +7,7 @@ import { Contact } from '../Pages/Contact'
 
 export const AllRoutes = () => {
   return (
-    <div style={{padding: '0.5rem 1.5rem',paddingTop: '72px'}}>
+    <div style={{paddingTop: '68px'}}>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/Products" element={<Products />} />
