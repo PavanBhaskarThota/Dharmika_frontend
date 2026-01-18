@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Typography } from "@mui/material";
+import { Box, Button, Divider, Icon, Typography } from "@mui/material";
 import allSpices from "../assets/homeImages/spicesJar.png";
 import patternImg from "../assets/homeImages/pattern2.png";
 import spiceBg1 from "../assets/homeImages/spiceBg1.png";
@@ -12,6 +12,10 @@ import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import { ProductCard } from "../Components/ProductCard";
 import { Footer } from "../Components/Footer";
+import SpellcheckIcon from '@mui/icons-material/Spellcheck';
+import CompostIcon from '@mui/icons-material/Compost';
+import SoupKitchenIcon from '@mui/icons-material/SoupKitchen';
+import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 
 export const Home = () => {
 	useEffect(() => {
@@ -25,8 +29,8 @@ export const Home = () => {
 					gap: { xs: "0.5rem", md: "2rem" },
 					color: "#1F3D2B",
 					padding: { xs: "1rem 1rem", md: "0" },
-					height: { xs: "auto", md: "91vh" },
-					flexDirection: { xs: "column-reverse", md: "row" },
+					height: { xs: "89vh", md: "91vh" },
+					flexDirection: { xs: "column", md: "row" },
 					width: { xs: "90%", md: "90%" },
 					margin: { xs: "0 auto", md: "auto" },
 				}}
@@ -44,14 +48,15 @@ export const Home = () => {
 					<Box
 						sx={{ height: "2rem", width: "250px" }}
 						data-aos="fade-up"
-						data-aos-duration="800"
+						data-aos-delay="800"
 					></Box>
 					<Box data-aos="fade-up" data-aos-duration="1000">
 						<Typography
 							sx={{
 								width: { xs: "90%", md: "75%" },
-								fontSize: { xs: "1.5rem", md: "3rem" },
+								fontSize: { xs: "1.7rem", md: "3rem" },
 								mb: "1rem",
+								fontWeight: "600",
 							}}
 						>
 							Bring Flavor to Life with Premium Spices
@@ -73,44 +78,54 @@ export const Home = () => {
 							width: { xs: "100%", md: "70%" },
 						}}
 						data-aos="fade-up"
-						data-aos-duration="1200"
+						data-aos-delay="500"
+						data-aos-duration="900"
 					>
 						<Link
 							to="/products"
 							style={{
 								textDecoration: "none",
 								color: "#1F3D2B",
-								width: "50%"
+								width: "50%",
 							}}
 						>
-						<Button
-							variant="outlined"
-							sx={{
-								color: "#1F3D2B",
-								borderColor: "#1F3D2B",
-								borderRadius: "1.5rem",
-								height: { xs: "2rem", md: "3rem" },
-								width: "100%",
-								fontSize: { xs: "0.6rem", md: "1rem" },
-							}}
-						>
+							<Button
+								variant="outlined"
+								sx={{
+									color: "#1F3D2B",
+									borderColor: "#1F3D2B",
+									borderRadius: "1.5rem",
+									height: { xs: "2.2rem", md: "3rem" },
+									width: "100%",
+									fontSize: { xs: "0.8rem", md: "1rem" },
+								}}
+							>
 								Products
-						</Button>
-							</Link>
-							<a style={{textDecoration: 'none', color: '#F5FBE6', width: '50%'}} href="https://wa.me/c/171868115980526" target="_blank">
-						<Button
-							variant="contained"
-							sx={{
-								bgcolor: "#1F3D2B",
+							</Button>
+						</Link>
+						<a
+							style={{
+								textDecoration: "none",
 								color: "#F5FBE6",
-								borderRadius: "1.5rem",
-								height: { xs: "2rem", md: "3rem" },
-								fontSize: { xs: "0.6rem", md: "1rem" },
-								width: "100%"
+								width: "50%",
 							}}
+							href="https://wa.me/c/171868115980526"
+							target="_blank"
 						>
-							WhatsApp
-						</Button></a>
+							<Button
+								variant="contained"
+								sx={{
+									bgcolor: "#1F3D2B",
+									color: "#F5FBE6",
+									borderRadius: "1.5rem",
+									height: { xs: "2.2rem", md: "3rem" },
+									fontSize: { xs: "0.8rem", md: "1rem" },
+									width: "100%",
+								}}
+							>
+								WhatsApp
+							</Button>
+						</a>
 					</Box>
 				</Box>
 				<Box
@@ -121,7 +136,8 @@ export const Home = () => {
 						display: { xs: "block", md: "block" },
 					}}
 					data-aos="fade-down"
-					data-aos-duration="1400"
+					data-aos-delay="500"
+					data-aos-duration="900"
 				>
 					<img
 						src={allSpices}
@@ -177,7 +193,7 @@ export const Home = () => {
 						<Box>
 							<Typography
 								sx={{
-									fontSize: { xs: "1rem", md: "1.5rem" },
+									fontSize: { xs: "1.2rem", md: "1.5rem" },
 									fontWeight: "bold",
 									mb: "0.5rem",
 								}}
@@ -224,7 +240,7 @@ export const Home = () => {
 						<Box>
 							<Typography
 								sx={{
-									fontSize: { xs: "1rem", md: "1.5rem" },
+									fontSize: { xs: "1.2rem", md: "1.5rem" },
 									fontWeight: "bold",
 									mb: "0.5rem",
 								}}
@@ -266,7 +282,7 @@ export const Home = () => {
 						<Box>
 							<Typography
 								sx={{
-									fontSize: { xs: "1rem", md: "1.5rem" },
+									fontSize: { xs: "1.2rem", md: "1.5rem" },
 									fontWeight: "bold",
 									mb: "0.5rem",
 								}}
@@ -324,23 +340,19 @@ export const Home = () => {
 							<Box
 								sx={{
 									height: { xs: "50px", md: "70px" },
-									width: { xs: "30%", md: "70px" },
+									width: { xs: "70%", md: "70px" },
+									m: {xs: '0', md:"auto"},
+									
 								}}
 							>
-								<img
-									src={organicImg}
-									alt="logo"
-									style={{
-										height: "100%",
-										width: "100%",
-										objectFit: "contain",
-									}}
-								/>
+								<Icon sx={{fontSize: {xs:'3rem'}}}>
+									<SpellcheckIcon style={{height: '100%', width: '100%'}}/>
+								</Icon>
 							</Box>
 							<Box>
 								<Typography
 									sx={{
-										fontSize: { xs: "1rem", md: "1.5rem" },
+										fontSize: { xs: "1.2rem", md: "1.5rem" },
 										fontWeight: "bold",
 										mb: "0.5rem",
 									}}
@@ -357,7 +369,6 @@ export const Home = () => {
 								</Typography>
 							</Box>
 						</Box>
-						<Divider />
 						<Box
 							sx={{
 								display: "flex",
@@ -374,23 +385,19 @@ export const Home = () => {
 							<Box
 								sx={{
 									height: { xs: "50px", md: "70px" },
-									width: { xs: "30%", md: "70px" },
+									width: { xs: "70%", md: "70px" },
+									m: {xs: '0', md:"auto"},
+									
 								}}
 							>
-								<img
-									src={earthPlant}
-									alt="logo"
-									style={{
-										height: "100%",
-										width: "100%",
-										objectFit: "contain",
-									}}
-								/>
+								<Icon sx={{fontSize: {xs:'3rem'}}}>
+									<CompostIcon style={{height: '100%', width: '100%'}}/>
+								</Icon>
 							</Box>
 							<Box>
 								<Typography
 									sx={{
-										fontSize: { xs: "1rem", md: "1.5rem" },
+										fontSize: { xs: "1.2rem", md: "1.5rem" },
 										fontWeight: "bold",
 										mb: "0.5rem",
 									}}
@@ -407,7 +414,6 @@ export const Home = () => {
 								</Typography>
 							</Box>
 						</Box>
-						<Divider />
 						<Box
 							sx={{
 								display: "flex",
@@ -424,23 +430,19 @@ export const Home = () => {
 							<Box
 								sx={{
 									height: { xs: "50px", md: "70px" },
-									width: { xs: "30%", md: "70px" },
+									width: { xs: "70%", md: "70px" },
+									m: {xs: '0', md:"auto"},
+									
 								}}
 							>
-								<img
-									src={earthPlant}
-									alt="logo"
-									style={{
-										height: "100%",
-										width: "100%",
-										objectFit: "contain",
-									}}
-								/>
+								<Icon sx={{fontSize: {xs:'3rem'}}}>
+									<SoupKitchenIcon style={{height: '100%', width: '100%'}}/>
+								</Icon>
 							</Box>
 							<Box>
 								<Typography
 									sx={{
-										fontSize: { xs: "1rem", md: "1.5rem" },
+										fontSize: { xs: "1.2rem", md: "1.5rem" },
 										fontWeight: "bold",
 										mb: "0.5rem",
 									}}
@@ -458,7 +460,6 @@ export const Home = () => {
 								</Typography>
 							</Box>
 						</Box>
-						<Divider />
 						<Box
 							sx={{
 								display: "flex",
@@ -475,23 +476,19 @@ export const Home = () => {
 							<Box
 								sx={{
 									height: { xs: "50px", md: "70px" },
-									width: { xs: "30%", md: "70px" },
+									width: { xs: "70%", md: "70px" },
+									m: {xs: '0', md:"auto"},
+									
 								}}
 							>
-								<img
-									src={deliveryVan}
-									alt="logo"
-									style={{
-										height: "100%",
-										width: "100%",
-										objectFit: "contain",
-									}}
-								/>
+								<Icon sx={{fontSize: {xs:'3rem'}}}>
+									<CurrencyRupeeIcon style={{height: '100%', width: '100%'}}/>
+								</Icon>
 							</Box>
 							<Box>
 								<Typography
 									sx={{
-										fontSize: { xs: "1rem", md: "1.5rem" },
+										fontSize: { xs: "1.2rem", md: "1.5rem" },
 										fontWeight: "bold",
 										mb: "0.5rem",
 									}}
@@ -555,7 +552,7 @@ export const Home = () => {
 							sx={{
 								textAlign: "center",
 								fontWeight: "bold",
-								fontSize: { xs: "0.8rem", md: "1.5rem" },
+								fontSize: { xs: "1rem", md: "1.5rem" },
 								width: { xs: "80%", md: "70%" },
 							}}
 						>
@@ -565,7 +562,7 @@ export const Home = () => {
 							sx={{
 								textDecoration: "underlined",
 								color: "#F4991A",
-								fontSize: { xs: "0.6rem", md: "1rem" },
+								fontSize: { xs: "0.8rem", md: "1rem" },
 							}}
 						>
 							Shop Now
@@ -604,7 +601,7 @@ export const Home = () => {
 							sx={{
 								textAlign: "center",
 								fontWeight: "bold",
-								fontSize: { xs: "0.8rem", md: "1.5rem" },
+								fontSize: { xs: "1rem", md: "1.5rem" },
 							}}
 						>
 							AT BEST PRICES
@@ -613,7 +610,7 @@ export const Home = () => {
 							sx={{
 								textDecoration: "underlined",
 								color: "#F4991A",
-								fontSize: { xs: "0.6rem", md: "1rem" },
+								fontSize: { xs: "0.8rem", md: "1rem" },
 							}}
 						>
 							Shop Now
@@ -624,7 +621,7 @@ export const Home = () => {
 
 			<Box
 				sx={{
-					height: "150vh",
+					py: { xs: "2rem", md: "3rem" },
 				}}
 			>
 				<Box
@@ -635,16 +632,14 @@ export const Home = () => {
 						gap: "1rem",
 						p: { xs: "1rem", md: "4rem" },
 					}}
-					data-aos="fade-zoom-in"
-					data-aos-easing="ease-in-back"
-					data-aos-delay="700"
-					data-aos-offset="0"
 				>
 					<Typography
 						sx={{
 							fontSize: { xs: "1.5rem", md: "2rem" },
 							fontWeight: "bold",
 						}}
+						data-aos="fade-up"
+					data-aos-duration="700"
 					>
 						Our Best Products
 					</Typography>
@@ -655,6 +650,8 @@ export const Home = () => {
 							width: { xs: "80%", md: "40%" },
 							textAlign: "center",
 						}}
+						data-aos="fade-up"
+					data-aos-duration="700"
 					>
 						We have a wide range of spices which you can find here
 						at a reasonable price and quality
@@ -665,41 +662,43 @@ export const Home = () => {
 						display: "flex",
 						flexWrap: "wrap",
 						justifyContent: "center",
-						width: { xs: "95%", md: "90%" },
-						gap: "1rem",
+						width: { xs: "100%", md: "95%" },
+						m: "auto",
+						gap: {xs:"1rem", md:"2rem"},
 						mt: "2rem",
 					}}
 				>
+				
+						<ProductCard
+							image="https://images.unsplash.com/photo-1642255521852-7e7c742ac58f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8R3JlZW4lMjBjYXJkYW1vbXxlbnwwfHwwfHx8MA%3D%3D"
+							name="Green cardamom 8+mm"
+							price="199"
+							grams="50"
+							about="Handpicked Kerala green cardamom, naturally dried, high oil content and long-lasting fragrance"
+						/>
+
 					<ProductCard
-						image="https://images.unsplash.com/photo-1601379760622-0d2e7ad24c11?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHNwaWNlc3xlbnwwfHwwfHx8MA%3D%3D"
-						name="Organic Almonds"
-						price="499"
-						grams="250"
-						about="Fresh, crunchy almonds sourced organically."
+						image="https://images.unsplash.com/photo-1591801058986-9e28e68670f7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QmxhY2slMjBwZXBwZXJ8ZW58MHx8MHx8fDA%3D"
+						name="Black pepper"
+						price="49"
+						grams="50"
+						about="Kerala black pepper, sun-dried whole peppercorns with sharp pungency and strong flavour"
 					/>
 
 					<ProductCard
-						image="https://images.unsplash.com/photo-1601379760622-0d2e7ad24c11?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHNwaWNlc3xlbnwwfHwwfHx8MA%3D%3D"
-						name="Organic Almonds"
-						price="499"
-						grams="250"
-						about="Fresh, crunchy almonds sourced organically."
+						image="https://images.unsplash.com/photo-1587131782738-de30ea91a542?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Q2lubmFtb24lMjBzdGlja3xlbnwwfHwwfHx8MA%3D%3D"
+						name="Cinnamon stick"
+						price="48"
+						grams="50"
+						about="True cinnamon sticks, sweet woody aroma, suitable for gravies, tea and desserts"
 					/>
 
 					<ProductCard
-						image="https://images.unsplash.com/photo-1601379760622-0d2e7ad24c11?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHNwaWNlc3xlbnwwfHwwfHx8MA%3D%3D"
-						name="Organic Almonds"
-						price="499"
-						grams="250"
-						about="Fresh, crunchy almonds sourced organically."
-					/>
-
-					<ProductCard
-						image="https://images.unsplash.com/photo-1601379760622-0d2e7ad24c11?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzJ8fHNwaWNlc3xlbnwwfHwwfHx8MA%3D%3D"
-						name="Organic Almonds"
-						price="499"
-						grams="250"
-						about="Fresh, crunchy almonds sourced organically."
+						image="https://media.istockphoto.com/id/1365999568/photo/bay-leaf-in-a-bowl-on-wooden-background.jpg?s=612x612&w=0&k=20&c=rAMiGpiiZmOr9PwjwWaZGYIbtBr8x_vCXAv-4Gzhrxc="
+						name="Bay leaf"
+						price="49"
+						grams="50"
+						about="Naturally dried Indian bay leaves, mild aroma for curries and rice dishes"
 					/>
 				</Box>
 			</Box>

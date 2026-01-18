@@ -1,7 +1,12 @@
 import { Box, Typography } from "@mui/material";
-import React from "react";
+import Aos from "aos";
+import React, { useEffect } from "react";
 
 export const Footer = () => {
+
+    useEffect(() => {
+		Aos.init();
+	});
 	return (
 		<Box
 			sx={{
@@ -19,7 +24,7 @@ export const Footer = () => {
 					gap: { xs: "1rem", md: "2rem" },
                     width: "90%",
                     margin: "auto",
-					mb: "3rem",
+					mb: "4rem",
 				}}
 			>
 				<Box
@@ -28,8 +33,10 @@ export const Footer = () => {
 						display: "flex",
 						gap: { xs: "1rem", md: "3rem" },
 						mb: 2,
-						flexDirection: { xs: "column", md: "row" },
+						flexDirection: { xs: "row", md: "row" },
 					}}
+                    data-aos="fade-up"
+					data-aos-duration="500"
 				>
 					<Box>
 						<img
@@ -63,8 +70,11 @@ export const Footer = () => {
 					</Box>
 				</Box>
 
-				<Box sx={{ width: { xs: "100%", md: "20%" } }}>
-					<Typography sx={{ fontSize: { xs: "1rem", md: "1.5rem" } }}>
+				<Box sx={{ width: { xs: "100%", md: "20%" }, display: { xs: "flex" , gap: '1rem', md: 'block' } }}>
+					<Typography sx={{ fontSize: { xs: "1rem", md: "1.5rem" } }}
+                    data-aos="fade-up"
+					data-aos-duration="500"
+                    >
 						Quick Links
 					</Typography>
 					<Box
@@ -75,45 +85,47 @@ export const Footer = () => {
 							flexDirection: { xs: "row", md: "column" },
 							fontSize: "0.8rem",
 						}}
+                        data-aos="fade-up"
+					data-aos-duration="500"
 					>
 						<a
 							href="/"
-							style={{ textDecoration: "none", color: "#f5f3ee" }}
+							style={{ color: "#f5f3ee" }}
 						>
 							Home
 						</a>
 						<a
 							href="/Products"
-							style={{ textDecoration: "none", color: "#f5f3ee" }}
+							style={{ color: "#f5f3ee" }}
 						>
 							Products
 						</a>
 						<a
 							href="/About"
-							style={{ textDecoration: "none", color: "#f5f3ee" }}
+							style={{ color: "#f5f3ee" }}
 						>
 							About
 						</a>
 						<a
 							href="/FAQ"
-							style={{ textDecoration: "none", color: "#f5f3ee" }}
+							style={{ color: "#f5f3ee" }}
 						>
 							FAQ
 						</a>
 						<a
 							href="/Contact"
-							style={{ textDecoration: "none", color: "#f5f3ee" }}
+							style={{ color: "#f5f3ee" }}
 						>
 							Contact
 						</a>
 					</Box>
 				</Box>
 
-				<Box sx={{ width: { xs: "100%", md: "20%" } }}>
+				{/* <Box sx={{ width: { xs: "100%", md: "20%" } }}>
 					<Typography sx={{ fontSize: { xs: "1rem", md: "1.5rem" } }}>
 						Follow Us
 					</Typography>
-				</Box>
+				</Box> */}
 			</Box>
 
 			<Box
@@ -121,13 +133,13 @@ export const Footer = () => {
 					display: "flex",
 					justifyContent: "center",
 					textAlign: "center",
-					gap: { xs: "1rem", md: "2rem" },
+					gap: { xs: "0.2rem", md: "2rem" },
 					flexDirection: { xs: "column", md: "row" },
 					pb: "0.5rem",
 				}}
 			>
 				<Typography sx={{ fontSize: "0.8rem", color: "lightgray" }}>
-					© 2024 Dharmika Spices. All rights reserved.
+					© 2026 Dharmika Spices. All rights reserved.
 				</Typography>
 				<Typography sx={{ fontSize: "0.8rem", color: "lightgray" }}>
 					Crafted with care by the Dharmika Team.

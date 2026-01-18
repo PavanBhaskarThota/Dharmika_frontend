@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Card,
   CardContent,
@@ -6,6 +6,7 @@ import {
   Typography,
   Box
 } from "@mui/material";
+import Aos from "aos";
 
 export const ProductCard = ({
   image,
@@ -14,16 +15,24 @@ export const ProductCard = ({
   grams,
   about
 }) => {
+
+  useEffect(() => {
+      Aos.init();
+    });
+
   return (
     <Card
       sx={{
-        width: {xs: '40%', md: '20%'},
+        width: {xs: '43%', md: '20%'},
         borderRadius: "5px",
         background: "rgba(255, 255, 255, 0.15)",
         backdropFilter: "blur(12px)",
         WebkitBackdropFilter: "blur(12px)",
         color: "#1F3D2B"
       }}
+      data-aos="fade-up"
+			data-aos-duration="700"
+			data-aos-delay="300"
     >
       <CardMedia
         component="img"
@@ -32,8 +41,6 @@ export const ProductCard = ({
         alt={name}
         sx={{
           objectFit: "cover",
-          borderTopLeftRadius: "20px",
-          borderTopRightRadius: "20px"
         }}
       />
 
