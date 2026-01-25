@@ -73,7 +73,7 @@ export const ProductCard = ({ product }) => {
 				<Fade in timeout={700} key={imageIndex}>
 					<CardMedia
 						component="img"
-						height="180"
+						height="200"
 						image={images[imageIndex]}
 						alt={name}
 						sx={{ objectFit: "cover" }}
