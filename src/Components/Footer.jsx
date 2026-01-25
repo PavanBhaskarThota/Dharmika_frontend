@@ -159,7 +159,7 @@ export const Footer = () => {
 						<a href="https://www.instagram.com/dharmika_spices?igsh=MXg4MzdvbGJvbnMzbg==" target="_blank" style={{ color: "#f5f3ee" }}>
 							Instagram
 						</a>
-						<a href="https://www.instagram.com/dharmika_spices?igsh=MXg4MzdvbGJvbnMzbg==" target="_blank" style={{ color: "#f5f3ee" }}>
+						<a href="https://wa.me/c/918332859597" target="_blank" style={{ color: "#f5f3ee" }}>
 							WhatsApp
 						</a>
 					</Box>
