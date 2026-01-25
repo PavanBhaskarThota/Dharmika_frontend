@@ -607,15 +607,21 @@ export const Home = () => {
 						>
 							BEST QUALITY SPICES
 						</Typography>
-						<Button
-							sx={{
-								textDecoration: "underlined",
-								color: "#F4991A",
-								fontSize: { xs: "0.8rem", md: "1rem" },
-							}}
+						<a
+							href="https://wa.me/c/171868115980526"
+							target="_blank"
+							style={{ textDecoration: "none", color: "inherit" }}
 						>
-							Shop Now
-						</Button>
+							<Button
+								sx={{
+									textDecoration: "underlined",
+									color: "#F4991A",
+									fontSize: { xs: "0.8rem", md: "1rem" },
+								}}
+							>
+								Shop Now
+							</Button>
+						</a>
 					</Box>
 				</Box>
 				<Box
@@ -655,15 +661,21 @@ export const Home = () => {
 						>
 							AT BEST PRICES
 						</Typography>
-						<Button
-							sx={{
-								textDecoration: "underlined",
-								color: "#F4991A",
-								fontSize: { xs: "0.8rem", md: "1rem" },
-							}}
+						<a
+							href="https://wa.me/c/171868115980526"
+							target="_blank"
+							style={{ textDecoration: "none", color: "inherit" }}
 						>
-							Shop Now
-						</Button>
+							<Button
+								sx={{
+									textDecoration: "underlined",
+									color: "#F4991A",
+									fontSize: { xs: "0.8rem", md: "1rem" },
+								}}
+							>
+								Shop Now
+							</Button>
+						</a>
 					</Box>
 				</Box>
 			</Box>
@@ -744,12 +756,18 @@ export const Home = () => {
 							<Box
 								sx={{
 									width: { xs: "85%", md: "50%", lg: "22%" },
-									m: 'auto'
+									m: "auto",
 								}}
-							>	
-							<Link to={'/Products'} style={{ textDecoration: "none", color: "inherit" }}>
-								<ProductCard product={product} />
-							</Link>
+							>
+								<Link
+									to={"/Products"}
+									style={{
+										textDecoration: "none",
+										color: "inherit",
+									}}
+								>
+									<ProductCard product={product} />
+								</Link>
 							</Box>
 						))}
 					</Box>
