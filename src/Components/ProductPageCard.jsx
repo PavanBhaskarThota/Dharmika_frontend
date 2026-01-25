@@ -70,10 +70,10 @@ export const ProductPageCard = ({ product }) => {
 		>
 			{/* Image Slider */}
 			<Box sx={{ position: "relative" }}>
-				<Fade in timeout={600} key={imageIndex}>
+				<Fade in timeout={700} key={imageIndex}>
 					<CardMedia
 						component="img"
-						height="260"
+						height="180"
 						image={images[imageIndex]}
 						alt={name}
 						sx={{ objectFit: "cover" }}
@@ -121,13 +121,13 @@ export const ProductPageCard = ({ product }) => {
 			<CardContent sx={{ p: 2 }}>
 				<Stack spacing={1}>
 					<Typography
-						variant="h6"
 						fontWeight={600}
 						color="#1F3D2B"
 						sx={{
 							whiteSpace: "nowrap",
 							overflow: "hidden",
 							textOverflow: "ellipsis",
+                            fontSize: {xs: '1rem', md: '1.2rem'},
 						}}
 					>
 						{name.charAt(0).toUpperCase() + name.slice(1)}
@@ -145,7 +145,7 @@ export const ProductPageCard = ({ product }) => {
 							sx={{
 								display: "flex",
 								alignItems: "center",
-								gap: 1,
+								gap: '0.2rem',
 								flexDirection: "column",
 							}}
 						>
@@ -175,8 +175,9 @@ export const ProductPageCard = ({ product }) => {
 							sx={{
 								display: "flex",
 								alignItems: "center",
-								gap: 1,
+								gap: '0.2rem',
 								flexDirection: "column",
+                                height: {xs: '100px', md: '30px'}
 							}}
 						>
 							<Typography
@@ -202,7 +203,7 @@ export const ProductPageCard = ({ product }) => {
 					{description && (
 						<Box
 							sx={{
-								height: "100px",
+								height: "80px",
 								overflow: "auto",
 								"&::-webkit-scrollbar": { display: "none" },
 							}}
