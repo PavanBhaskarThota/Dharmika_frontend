@@ -16,7 +16,7 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Aos from "aos";
 
-export const ProductPageCard = ({ product }) => {
+export const ProductCard = ({ product }) => {
 	const { name, description, images = [], weightPrice = [] } = product;
 
 	const [imageIndex, setImageIndex] = useState(0);
@@ -73,7 +73,7 @@ export const ProductPageCard = ({ product }) => {
 				<Fade in timeout={700} key={imageIndex}>
 					<CardMedia
 						component="img"
-						height="180"
+						height="200"
 						image={images[imageIndex]}
 						alt={name}
 						sx={{ objectFit: "cover" }}
@@ -177,7 +177,6 @@ export const ProductPageCard = ({ product }) => {
 								alignItems: "center",
 								gap: '0.2rem',
 								flexDirection: "column",
-                                height: {xs: '100px', md: '30px'}
 							}}
 						>
 							<Typography

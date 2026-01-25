@@ -14,7 +14,7 @@ import SpellcheckIcon from "@mui/icons-material/Spellcheck";
 import CompostIcon from "@mui/icons-material/Compost";
 import SoupKitchenIcon from "@mui/icons-material/SoupKitchen";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
-import { ProductPageCard } from "../Components/ProductPageCard";
+import { ProductCard } from "../Components/ProductCard";
 import { useProducts } from "../Custom/Hooks/useProducts";
 import { Loader } from "../Components/Loader";
 
@@ -738,7 +738,7 @@ export const Home = () => {
 									m: 'auto'
 								}}
 							>
-								<ProductPageCard product={product} />
+								<ProductCard product={product} />
 							</Box>
 						))}
 					</Box>
