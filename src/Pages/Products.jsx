@@ -66,7 +66,7 @@ export const Products = () => {
 					display: "flex",
 					justifyContent: "space-between",
 					m: "auto",
-					width: { xs: "90%", md: "90%" },
+					width: { xs: "90%", md: "95%" },
 				}}
 			>
 				<TextField
@@ -155,26 +155,27 @@ export const Products = () => {
 			</Box>
 
 			{filteredProducts.length ? (
-				<Grid
-					container
-					spacing={5}
+				<Box
 					sx={{
-						width: { xs: "90%", md: "90%" },
+						width: { xs: "95%", md: "95%" },
 						m: "auto",
+            display: "flex",
+            flexWrap: "wrap",
+            gap: { xs: "1rem", md: "1rem" },
 						justifyContent: { xs: "center", md: "start" },
 						mt: "2rem",
 					}}
 				>
 					{filteredProducts.map((product, index) => (
-						<Grid
+						<Box
 							item
 							key={index}
-							sx={{ width: { xs: "100%", md: "31%" } }}
+							sx={{ width: { xs: "90%", md: "30%", lg: "24%" } }}
 						>
 							<ProductPageCard product={product} />
-						</Grid>
+						</Box>
 					))}
-				</Grid>
+				</Box>
 			) : (
 				<Box
 					sx={{

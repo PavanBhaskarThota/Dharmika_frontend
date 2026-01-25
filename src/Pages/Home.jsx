@@ -1,6 +1,5 @@
 import { Box, Button, Divider, Icon, Typography } from "@mui/material";
 import allSpices from "../assets/homeImages/spicesJar.png";
-import patternImg from "../assets/homeImages/pattern2.png";
 import spiceBg1 from "../assets/homeImages/spiceBg1.png";
 import spiceBg2 from "../assets/homeImages/spiceBg2.png";
 import organicImg from "../assets/homeImages/organicImg.png";
@@ -10,7 +9,6 @@ import Aos from "aos";
 import { useEffect, useState } from "react";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
-import { ProductCard } from "../Components/ProductCard";
 import { Footer } from "../Components/Footer";
 import SpellcheckIcon from "@mui/icons-material/Spellcheck";
 import CompostIcon from "@mui/icons-material/Compost";
@@ -739,7 +737,6 @@ export const Home = () => {
 									width: { xs: "85%", md: "50%", lg: "22%" },
 									m: 'auto'
 								}}
-
 							>
 								<ProductPageCard product={product} />
 							</Box>

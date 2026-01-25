@@ -1,6 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import Aos from "aos";
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
 
@@ -70,7 +71,7 @@ export const Footer = () => {
 					</Box>
 				</Box>
 
-				<Box sx={{ width: { xs: "100%", md: "20%" }, display: { xs: "flex" , gap: '1rem', md: 'block' } }}>
+				<Box sx={{ width: { xs: "100%", md: "20%" }, display: { xs: "flex" , gap: '1rem', md: 'block' }, alignItems: 'center' }}>
 					<Typography sx={{ fontSize: { xs: "1rem", md: "1.5rem" } }}
                     data-aos="fade-up"
 					data-aos-duration="500"
@@ -85,40 +86,41 @@ export const Footer = () => {
 							flexDirection: { xs: "row", md: "column" },
 							flexWrap: "wrap",
 							fontSize: "0.8rem",
+							alignItems: "center",
 						}}
                         data-aos="fade-up"
 					data-aos-duration="500"
 					>
-						<a
-							href="/"
+						<Link
+							to="/"
 							style={{ color: "#f5f3ee" }}
 						>
 							Home
-						</a>
-						<a
-							href="/Products"
+						</Link>
+						<Link
+							to="/Products"
 							style={{ color: "#f5f3ee" }}
 						>
 							Products
-						</a>
-						<a
-							href="/About"
+						</Link>
+						<Link
+							to="/About"
 							style={{ color: "#f5f3ee" }}
 						>
 							About
-						</a>
-						<a
-							href="/FAQ"
+						</Link>
+						<Link
+							to="/FAQ"
 							style={{ color: "#f5f3ee" }}
 						>
 							FAQ
-						</a>
-						<a
-							href="/Contact"
+						</Link>
+						<Link
+							to="/Contact"
 							style={{ color: "#f5f3ee" }}
 						>
 							Contact
-						</a>
+						</Link>
 					</Box>
 				</Box>
 
