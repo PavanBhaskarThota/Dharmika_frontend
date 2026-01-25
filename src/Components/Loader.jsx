@@ -34,33 +34,33 @@ const Load = styled.div`
 		height: 0.5em;
 		border-radius: 0.5em;
 		transform: translate(-50%, -50%);
-		animation: slide 3s infinite;
+		animation: slide 2s infinite;
 	}
 
 	@keyframes slide {
 		0% {
-			width: 5em;
+			width: 6em;
 			box-shadow:
 				1em -0.5em #aabbc4,
 				-1em 0.5em #1f3d2b;
 		}
 
 		35% {
-			width: 0.5em;
+			width: 0.6em;
 			box-shadow:
 				0 -0.5em #aabbc4,
 				0 0.5em #1f3d2b;
 		}
 
 		70% {
-			width: 0.5em;
+			width: 0.6em;
 			box-shadow:
 				-1em -0.5em #1f3d2b,
 				1em 0.5em #aabbc4;
 		}
 
 		100% {
-			width: 5em;
+			width: 6em;
 			box-shadow:
 				1em -0.5em #1f3d2b,
 				-1em 0.5em #aabbc4;

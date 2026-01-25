@@ -4,8 +4,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export const Footer = () => {
-
-    useEffect(() => {
+	useEffect(() => {
 		Aos.init();
 	});
 	return (
@@ -23,8 +22,8 @@ export const Footer = () => {
 					display: "flex",
 					flexDirection: { xs: "column", md: "row" },
 					gap: { xs: "1rem", md: "2rem" },
-                    width: "90%",
-                    margin: "auto",
+					width: "90%",
+					margin: "auto",
 					mb: "4rem",
 				}}
 			>
@@ -32,11 +31,11 @@ export const Footer = () => {
 					sx={{
 						width: { xs: "100%", md: "60%" },
 						display: "flex",
-						gap: { xs: "0.5rem", md: "3rem" },
+						gap: { xs: "2rem", md: "3rem" },
 						mb: 2,
 						flexDirection: { xs: "row", md: "row" },
 					}}
-                    data-aos="fade-up"
+					data-aos="fade-up"
 					data-aos-duration="500"
 				>
 					<Box>
@@ -71,11 +70,18 @@ export const Footer = () => {
 					</Box>
 				</Box>
 
-				<Box sx={{ width: { xs: "100%", md: "20%" }, display: { xs: "flex" , gap: '1rem', md: 'block' }, alignItems: 'center' }}>
-					<Typography sx={{ fontSize: { xs: "1rem", md: "1.5rem" } }}
-                    data-aos="fade-up"
-					data-aos-duration="500"
-                    >
+				<Box
+					sx={{
+						width: { xs: "100%", md: "20%" },
+						display: { xs: "flex", md: "block" },
+						alignItems: "center",
+					}}
+				>
+					<Typography
+						sx={{ fontSize: { xs: "1rem", md: "1.5rem" } }}
+						data-aos="fade-up"
+						data-aos-duration="500"
+					>
 						Quick Links
 					</Typography>
 					<Box
@@ -86,39 +92,23 @@ export const Footer = () => {
 							flexDirection: { xs: "row", md: "column" },
 							flexWrap: "wrap",
 							fontSize: "0.8rem",
-							alignItems: "center",
 						}}
-                        data-aos="fade-up"
-					data-aos-duration="500"
+						data-aos="fade-up"
+						data-aos-duration="500"
 					>
-						<Link
-							to="/"
-							style={{ color: "#f5f3ee" }}
-						>
+						<Link to="/" style={{ color: "#f5f3ee" }}>
 							Home
 						</Link>
-						<Link
-							to="/Products"
-							style={{ color: "#f5f3ee" }}
-						>
+						<Link to="/Products" style={{ color: "#f5f3ee" }}>
 							Products
 						</Link>
-						<Link
-							to="/About"
-							style={{ color: "#f5f3ee" }}
-						>
+						<Link to="/About" style={{ color: "#f5f3ee" }}>
 							About
 						</Link>
-						<Link
-							to="/FAQ"
-							style={{ color: "#f5f3ee" }}
-						>
+						<Link to="/FAQ" style={{ color: "#f5f3ee" }}>
 							FAQ
 						</Link>
-						<Link
-							to="/Contact"
-							style={{ color: "#f5f3ee" }}
-						>
+						<Link to="/Contact" style={{ color: "#f5f3ee" }}>
 							Contact
 						</Link>
 					</Box>

@@ -57,11 +57,11 @@ export const Navbar = () => {
 			<List>
 				{["Home", "Products", "About", "FAQ", "Contact"].map(
 					(text, index) => (
-						<ListItem key={text} disablePadding>
-							<Link
-								to={text === "Home" ? "/" : `/${text}`}
-								style={{ textDecoration: "none" }}
-							>
+						<Link
+							to={text === "Home" ? "/" : `/${text}`}
+							style={{ textDecoration: "none" }}
+						>
+							<ListItem key={text} disablePadding>
 								<ListItemButton
 									sx={{
 										color: "#f5f3ee",
@@ -84,8 +84,8 @@ export const Navbar = () => {
 										}}
 									/>
 								</ListItemButton>
-							</Link>
-						</ListItem>
+							</ListItem>
+						</Link>
 					),
 				)}
 			</List>
@@ -96,7 +96,7 @@ export const Navbar = () => {
 		<NavBar>
 			<div className="navBarDiv">
 				<Link to="/" onClick={handleLinkClick}>
-				<img src="/dharmika_logo.svg" alt="logo" />
+					<img src="/dharmika_logo.svg" alt="logo" />
 				</Link>
 				<div className="links">
 					<Link to="/" onClick={handleLinkClick}>
@@ -207,6 +207,7 @@ const NavBar = styled.nav`
 		justify-content: space-between;
 		gap: 1rem;
 		color: #1f3d2b;
+		height: 42px;
 		align-items: center;
 		box-shadow:
 			rgba(3, 1, 1, 0.02) 0px 1px 3px 0px,

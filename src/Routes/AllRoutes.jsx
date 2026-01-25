@@ -4,10 +4,11 @@ import {Products} from '../Pages/Products'
 import { About } from '../Pages/About'
 import { FAQ } from '../Pages/FAQ'
 import { Contact } from '../Pages/Contact'
+import { Box } from '@mui/material'
 
 export const AllRoutes = () => {
   return (
-    <div style={{paddingTop: '68px'}}>
+    <Box sx={{pt: { xs: '58px', md: '68px'}}}>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/Products" element={<Products />} />
@@ -15,7 +16,7 @@ export const AllRoutes = () => {
       <Route path="/FAQ" element={<FAQ />} />
       <Route path="/Contact" element={<Contact />} />
     </Routes>
-    </div>
+    </Box>
       
   )
 }
