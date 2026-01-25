@@ -8,7 +8,7 @@ import { Box } from '@mui/material'
 
 export const AllRoutes = () => {
   return (
-    <Box sx={{pt: { xs: '58px', md: '68px'}}}>
+    <Box sx={{pt: { xs: '58px', md: '72px'}}}>
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/Products" element={<Products />} />

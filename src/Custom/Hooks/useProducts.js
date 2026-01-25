@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 
 export function useProducts() {
@@ -5,12 +6,13 @@ export function useProducts() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(
-            "https://docs.google.com/spreadsheets/d/1wr_fR1Wl131gZtlcNlWjKzFnXciqEJJ63PyivkTjqfQ/gviz/tq?tqx=out:json"
-        )
-            .then(res => res.text())
-            .then(text => {
-                const json = JSON.parse(text.substring(47).slice(0, -2));
+        const fetchData = async () => {
+            try {
+                const response = await axios.get(
+                    "https://docs.google.com/spreadsheets/d/1p1-NvOasWPM-Lr-LHuUtMwI3tK_TGOBsA7ICrHj71_M/gviz/tq?tqx=out:json",
+                    { timeout: 50000 } // Set a timeout of 5 seconds
+                );
+                const json = JSON.parse(response.data.substring(47).slice(0, -2));
                 const rows = json.table.rows;
 
                 const parsed = rows.map(r => ({
@@ -23,7 +25,13 @@ export function useProducts() {
 
                 groupByProduct(parsed);
                 setLoading(false);
-            });
+            } catch (error) {
+                console.error(error);
+                setLoading(false);
+            }
+        };
+
+        fetchData();
     }, []);
 
     function groupByProduct(products) {
