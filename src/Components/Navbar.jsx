@@ -114,7 +114,7 @@ export const Navbar = () => {
 				<div>
 					<a
 						style={{ color: "#075e54" }}
-						href="https://wa.me/c/171868115980526"
+						href="https://wa.me/c/918332859597"
 						target="_blank"
 						rel="noreferrer"
 					>
@@ -139,7 +139,7 @@ export const Navbar = () => {
 				<div>
 					<a
 						style={{ color: "#075e54" }}
-						href="https://wa.me/c/171868115980526"
+						href="https://wa.me/c/918332859597"
 						target="_blank"
 						rel="noreferrer"
 					>

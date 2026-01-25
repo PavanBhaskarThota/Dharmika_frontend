@@ -130,7 +130,7 @@ export const Home = () => {
 								color: "#F5FBE6",
 								width: "50%",
 							}}
-							href="https://wa.me/c/171868115980526"
+							href="https://wa.me/c/918332859597"
 							target="_blank"
 						>
 							<Button
@@ -608,7 +608,7 @@ export const Home = () => {
 							BEST QUALITY SPICES
 						</Typography>
 						<a
-							href="https://wa.me/c/171868115980526"
+							href="https://wa.me/c/918332859597"
 							target="_blank"
 							style={{ textDecoration: "none", color: "inherit" }}
 						>
@@ -662,7 +662,7 @@ export const Home = () => {
 							AT BEST PRICES
 						</Typography>
 						<a
-							href="https://wa.me/c/171868115980526"
+							href="https://wa.me/c/918332859597"
 							target="_blank"
 							style={{ textDecoration: "none", color: "inherit" }}
 						>
