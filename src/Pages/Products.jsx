@@ -10,7 +10,7 @@ import {
 	Typography,
 } from "@mui/material";
 import { useProducts } from "../Custom/Hooks/useProducts";
-import { ProductPageCard } from "../Components/ProductPageCard";
+import { ProductCard } from "../Components/ProductCard";
 import { Loader } from "../Components/Loader";
 import { useEffect, useState } from "react";
 import CloudOffIcon from "@mui/icons-material/CloudOff";
@@ -172,7 +172,7 @@ export const Products = () => {
 							key={index}
 							sx={{ width: { xs: "90%", md: "30%", lg: "24%" } }}
 						>
-							<ProductPageCard product={product} />
+							<ProductCard product={product} />
 						</Box>
 					))}
 				</Box>
