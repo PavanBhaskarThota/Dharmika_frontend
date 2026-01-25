@@ -12,7 +12,7 @@ export const Footer = () => {
 			sx={{
 				bgcolor: "#1F3D2B",
 				color: "#f5f3ee",
-				px: { xs: "2rem", md: "4rem" },
+				px: { xs: "1rem", md: "4rem" },
 				pt: "2rem",
 				minHeight: "120px",
 			}}
@@ -31,7 +31,7 @@ export const Footer = () => {
 					sx={{
 						width: { xs: "100%", md: "60%" },
 						display: "flex",
-						gap: { xs: "1rem", md: "3rem" },
+						gap: { xs: "0.5rem", md: "3rem" },
 						mb: 2,
 						flexDirection: { xs: "row", md: "row" },
 					}}
@@ -43,8 +43,8 @@ export const Footer = () => {
 							src="/dharmika_logo.svg"
 							alt="logo"
 							style={{
-								width: "80px",
-								height: "80px",
+								width: "50px",
+								height: "50px",
 								backgroundColor: "#F5FBE6",
 								borderRadius: "50%",
 							}}
@@ -83,6 +83,7 @@ export const Footer = () => {
 							gap: "0.5rem",
 							pt: "0.5rem",
 							flexDirection: { xs: "row", md: "column" },
+							flexWrap: "wrap",
 							fontSize: "0.8rem",
 						}}
                         data-aos="fade-up"

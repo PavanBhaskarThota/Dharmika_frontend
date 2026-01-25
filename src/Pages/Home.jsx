@@ -736,8 +736,10 @@ export const Home = () => {
 						{filteredProducts.map((product, index) => (
 							<Box
 								sx={{
-									width: { xs: "90%", md: "50%", lg: "22%" },
+									width: { xs: "85%", md: "50%", lg: "22%" },
+									m: 'auto'
 								}}
+
 							>
 								<ProductPageCard product={product} />
 							</Box>
