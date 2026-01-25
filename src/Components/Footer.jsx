@@ -21,7 +21,7 @@ export const Footer = () => {
 				sx={{
 					display: "flex",
 					flexDirection: { xs: "column", md: "row" },
-					gap: { xs: "1rem", md: "2rem" },
+
 					width: "90%",
 					margin: "auto",
 					mb: "4rem",
@@ -31,26 +31,28 @@ export const Footer = () => {
 					sx={{
 						width: { xs: "100%", md: "60%" },
 						display: "flex",
-						gap: { xs: "2rem", md: "3rem" },
+						gap: "1rem",
 						mb: 2,
 						flexDirection: { xs: "row", md: "row" },
 					}}
 					data-aos="fade-up"
 					data-aos-duration="500"
 				>
-					<Box>
-						<img
-							src="/dharmika_logo.svg"
-							alt="logo"
-							style={{
-								width: "50px",
-								height: "50px",
-								backgroundColor: "#F5FBE6",
-								borderRadius: "50%",
-							}}
-						/>
+					<Box sx={{ width: { xs: "30%", md: "10%" } }}>
+						<Link to="/">
+							<img
+								src="/dharmika_logo.svg"
+								alt="logo"
+								style={{
+									width: "50px",
+									height: "50px",
+									backgroundColor: "#F5FBE6",
+									borderRadius: "50%",
+								}}
+							/>
+						</Link>
 					</Box>
-					<Box>
+					<Box sx={{ width: "70%" }}>
 						<Typography
 							sx={{
 								fontSize: { xs: "1rem", md: "1.5rem" },
@@ -75,15 +77,18 @@ export const Footer = () => {
 						width: { xs: "100%", md: "20%" },
 						display: { xs: "flex", md: "block" },
 						alignItems: "center",
+						gap: "1rem",
 					}}
 				>
-					<Typography
-						sx={{ fontSize: { xs: "1rem", md: "1.5rem" } }}
-						data-aos="fade-up"
-						data-aos-duration="500"
-					>
-						Quick Links
-					</Typography>
+					<Box sx={{ width: { xs: "30%", md: "100%" } }}>
+						<Typography
+							sx={{ fontSize: { xs: "1rem", md: "1.5rem" } }}
+							data-aos="fade-up"
+							data-aos-duration="500"
+						>
+							Quick Links
+						</Typography>
+					</Box>
 					<Box
 						sx={{
 							display: "flex",
@@ -92,6 +97,7 @@ export const Footer = () => {
 							flexDirection: { xs: "row", md: "column" },
 							flexWrap: "wrap",
 							fontSize: "0.8rem",
+							width: "70%",
 						}}
 						data-aos="fade-up"
 						data-aos-duration="500"
@@ -114,11 +120,50 @@ export const Footer = () => {
 					</Box>
 				</Box>
 
-				{/* <Box sx={{ width: { xs: "100%", md: "20%" } }}>
-					<Typography sx={{ fontSize: { xs: "1rem", md: "1.5rem" } }}>
-						Follow Us
-					</Typography>
-				</Box> */}
+				<Box
+					sx={{
+						width: { xs: "100%", md: "20%" },
+						display: { xs: "flex", md: "block" },
+						alignItems: "center",
+						gap: "1rem",
+						mt: { xs: "1rem", md: "0" },
+						mb: { xs: "1rem", md: "0" },
+					}}
+				>
+					<Box sx={{ width: { xs: "30%", md: "100%" } }}>
+						<Typography
+							sx={{ fontSize: { xs: "1rem", md: "1.5rem" } }}
+							data-aos="fade-up"
+							data-aos-duration="500"
+						>
+							Follow / Contact Us
+						</Typography>
+					</Box>
+
+					<Box
+						sx={{
+							display: "flex",
+							flexDirection: { xs: "row", md: "column" },
+							flexWrap: "wrap",
+							gap: "0.5rem",
+							pt: "0.5rem",
+							fontSize: "0.8rem",
+							width: "70%",
+						}}
+						data-aos="fade-up"
+						data-aos-duration="500"
+					>
+						<a href="https://www.instagram.com/dharmika_spices?igsh=MXg4MzdvbGJvbnMzbg==" target="_blank" style={{ color: "#f5f3ee" }}>
+							Facebook
+						</a>
+						<a href="https://www.instagram.com/dharmika_spices?igsh=MXg4MzdvbGJvbnMzbg==" target="_blank" style={{ color: "#f5f3ee" }}>
+							Instagram
+						</a>
+						<a href="https://www.instagram.com/dharmika_spices?igsh=MXg4MzdvbGJvbnMzbg==" target="_blank" style={{ color: "#f5f3ee" }}>
+							WhatsApp
+						</a>
+					</Box>
+				</Box>
 			</Box>
 
 			<Box
@@ -126,15 +171,15 @@ export const Footer = () => {
 					display: "flex",
 					justifyContent: "center",
 					textAlign: "center",
-					gap: { xs: "0.2rem", md: "2rem" },
-					flexDirection: { xs: "column", md: "row" },
+					gap: { xs: "1rem", md: "2rem" },
+					flexDirection: { xs: "row", md: "row" },
 					pb: "0.5rem",
 				}}
 			>
-				<Typography sx={{ fontSize: "0.8rem", color: "lightgray" }}>
+				<Typography sx={{ fontSize: "0.6rem", color: "lightgray" }}>
 					© 2026 Dharmika Spices. All rights reserved.
 				</Typography>
-				<Typography sx={{ fontSize: "0.8rem", color: "lightgray" }}>
+				<Typography sx={{ fontSize: "0.6rem", color: "lightgray" }}>
 					Crafted with care by the Dharmika Team.
 				</Typography>
 			</Box>

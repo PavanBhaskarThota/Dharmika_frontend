@@ -746,8 +746,10 @@ export const Home = () => {
 									width: { xs: "85%", md: "50%", lg: "22%" },
 									m: 'auto'
 								}}
-							>
+							>	
+							<Link to={'/Products'} style={{ textDecoration: "none", color: "inherit" }}>
 								<ProductCard product={product} />
+							</Link>
 							</Box>
 						))}
 					</Box>
