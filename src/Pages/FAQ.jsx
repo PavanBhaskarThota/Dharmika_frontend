@@ -111,8 +111,6 @@ export const FAQ = () => {
 											borderColor: "#1F3D2B",
 										},
 									}}
-									data-aos="fade-up"
-									data-aos-duration="1000"
 								>
 									<AccordionSummary
 										expandIcon={<ExpandMoreIcon />}
