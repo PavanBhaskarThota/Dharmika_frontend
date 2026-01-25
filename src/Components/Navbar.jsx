@@ -27,11 +27,11 @@ export const Navbar = () => {
 	};
 
 	const handleLinkClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	};
 
 	const DrawerList = (
 		<Box
@@ -42,7 +42,15 @@ export const Navbar = () => {
 			color="#F5FBE6"
 			height={"100vh"}
 		>
-			<Box sx={{minHeight: '66px',maxHeight: '72px', display: "flex",alignItems: "center", paddingLeft: '4.5rem'}}>
+			<Box
+				sx={{
+					minHeight: "66px",
+					maxHeight: "72px",
+					display: "flex",
+					alignItems: "center",
+					paddingLeft: "4.5rem",
+				}}
+			>
 				Menu
 			</Box>
 			<Divider />
@@ -64,7 +72,7 @@ export const Navbar = () => {
 									<ListItemIcon sx={{ color: "#f5f3ee" }}>
 										{index === 0 && <HomeIcon />}
 										{index === 1 && <InventoryIcon />}
-										{index === 2 && <InfoIcon/>}
+										{index === 2 && <InfoIcon />}
 										{index === 3 && <QuizIcon />}
 										{index === 4 && <CallIcon />}
 									</ListItemIcon>
@@ -78,7 +86,7 @@ export const Navbar = () => {
 								</ListItemButton>
 							</Link>
 						</ListItem>
-					)
+					),
 				)}
 			</List>
 		</Box>
@@ -87,32 +95,56 @@ export const Navbar = () => {
 	return (
 		<NavBar>
 			<div className="navBarDiv">
+				<Link to="/" onClick={handleLinkClick}>
 				<img src="/dharmika_logo.svg" alt="logo" />
+				</Link>
 				<div className="links">
-					<Link to="/" onClick={handleLinkClick}>Home</Link>
+					<Link to="/" onClick={handleLinkClick}>
+						Home
+					</Link>
 					<Link to="/Products">Products</Link>
 					<Link to="/About">About</Link>
-					<h1>DHARMIKA SPICES</h1>
+					<Link to="/" onClick={handleLinkClick}>
+						<h1>DHARMIKA SPICES</h1>
+					</Link>
 					<Link to="/FAQ">Chef</Link>
 					<Link to="/FAQ">FAQ</Link>
 					<Link to="/Contact">Contact</Link>
 				</div>
 				<div>
-					<a style={{color:'#075e54'}} href="https://wa.me/c/171868115980526" target="_blank" rel="noreferrer">Shop Now</a>
+					<a
+						style={{ color: "#075e54" }}
+						href="https://wa.me/c/171868115980526"
+						target="_blank"
+						rel="noreferrer"
+					>
+						Shop Now
+					</a>
 				</div>
 			</div>
 			<div className="mobileNavBar">
 				<div className="mobileLogo">
-					<MenuIcon onClick={toggleDrawer(true)} sx={{fontSize: "2rem"}} />
+					<MenuIcon
+						onClick={toggleDrawer(true)}
+						sx={{ fontSize: "2rem" }}
+					/>
 				</div>
 				<Box>
-
-				<Link to='/' onClick={handleLinkClick}>
-				<Typography variant="h6" sx={{fontFamily: 'serif'}}>DHARMIKA</Typography>
-				</Link>
+					<Link to="/" onClick={handleLinkClick}>
+						<Typography variant="h6" sx={{ fontFamily: "serif" }}>
+							DHARMIKA
+						</Typography>
+					</Link>
 				</Box>
 				<div>
-					<a style={{color:'#075e54'}} href="https://wa.me/c/171868115980526" target="_blank" rel="noreferrer">Shop Now</a>
+					<a
+						style={{ color: "#075e54" }}
+						href="https://wa.me/c/171868115980526"
+						target="_blank"
+						rel="noreferrer"
+					>
+						Shop Now
+					</a>
 				</div>
 				<Drawer open={open} onClose={toggleDrawer(false)}>
 					{DrawerList}
@@ -132,9 +164,10 @@ const NavBar = styled.nav`
 		display: flex;
 		justify-content: space-between;
 		gap: 1rem;
-		color: #1F3D2B;
+		color: #1f3d2b;
 		align-items: center;
-		box-shadow: rgba(3, 1, 1, 0.02) 0px 1px 3px 0px,
+		box-shadow:
+			rgba(3, 1, 1, 0.02) 0px 1px 3px 0px,
 			rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 		padding: 0.5rem 1.5rem;
 		background-repeat: no-repeat;
@@ -147,13 +180,13 @@ const NavBar = styled.nav`
 		-webkit-backdrop-filter: blur(10px);
 	}
 
-	.links{
+	.links {
 		display: flex;
 		gap: 1rem;
 		align-items: center;
 	}
 
-	h1{
+	h1 {
 		margin: 0px;
 		padding: 0px;
 		font-family: serif;
@@ -161,7 +194,7 @@ const NavBar = styled.nav`
 		padding: 0px 1.5rem;
 	}
 
-	h4{
+	h4 {
 		margin: 0px;
 		padding: 0px;
 		font-family: serif;
@@ -173,9 +206,10 @@ const NavBar = styled.nav`
 		display: none;
 		justify-content: space-between;
 		gap: 1rem;
-		color: #1F3D2B;
+		color: #1f3d2b;
 		align-items: center;
-		box-shadow: rgba(3, 1, 1, 0.02) 0px 1px 3px 0px,
+		box-shadow:
+			rgba(3, 1, 1, 0.02) 0px 1px 3px 0px,
 			rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 		padding: 0.5rem 1rem;
 		background-repeat: no-repeat;
@@ -201,7 +235,7 @@ const NavBar = styled.nav`
 
 	a {
 		text-decoration: none;
-		color: #1F3D2B;
+		color: #1f3d2b;
 		font-size: 14px;
 	}
 

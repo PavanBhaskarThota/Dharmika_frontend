@@ -7,17 +7,32 @@ import organicImg from "../assets/homeImages/organicImg.png";
 import deliveryVan from "../assets/homeImages/deliveryVan.png";
 import earthPlant from "../assets/homeImages/earth.png";
 import Aos from "aos";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import { ProductCard } from "../Components/ProductCard";
 import { Footer } from "../Components/Footer";
-import SpellcheckIcon from '@mui/icons-material/Spellcheck';
-import CompostIcon from '@mui/icons-material/Compost';
-import SoupKitchenIcon from '@mui/icons-material/SoupKitchen';
-import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
+import SpellcheckIcon from "@mui/icons-material/Spellcheck";
+import CompostIcon from "@mui/icons-material/Compost";
+import SoupKitchenIcon from "@mui/icons-material/SoupKitchen";
+import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
+import { ProductPageCard } from "../Components/ProductPageCard";
+import { useProducts } from "../Custom/Hooks/useProducts";
+import { Loader } from "../Components/Loader";
 
 export const Home = () => {
+	const { products, loading } = useProducts();
+	const [filteredProducts, setFilteredProducts] = useState([...products]);
+
+	useEffect(() => {
+		if (products.length > 0) {
+			const randomProducts = products
+				.sort(() => 0.5 - Math.random())
+				.slice(0, 4);
+			setFilteredProducts(randomProducts);
+		}
+	}, [products]);
+
 	useEffect(() => {
 		Aos.init();
 	});
@@ -341,18 +356,25 @@ export const Home = () => {
 								sx={{
 									height: { xs: "50px", md: "70px" },
 									width: { xs: "70%", md: "70px" },
-									m: {xs: '0', md:"auto"},
-									
+									m: { xs: "0", md: "auto" },
 								}}
 							>
-								<Icon sx={{fontSize: {xs:'3rem'}}}>
-									<SpellcheckIcon style={{height: '100%', width: '100%'}}/>
+								<Icon sx={{ fontSize: { xs: "3rem" } }}>
+									<SpellcheckIcon
+										style={{
+											height: "100%",
+											width: "100%",
+										}}
+									/>
 								</Icon>
 							</Box>
 							<Box>
 								<Typography
 									sx={{
-										fontSize: { xs: "1.2rem", md: "1.5rem" },
+										fontSize: {
+											xs: "1.2rem",
+											md: "1.5rem",
+										},
 										fontWeight: "bold",
 										mb: "0.5rem",
 									}}
@@ -386,18 +408,25 @@ export const Home = () => {
 								sx={{
 									height: { xs: "50px", md: "70px" },
 									width: { xs: "70%", md: "70px" },
-									m: {xs: '0', md:"auto"},
-									
+									m: { xs: "0", md: "auto" },
 								}}
 							>
-								<Icon sx={{fontSize: {xs:'3rem'}}}>
-									<CompostIcon style={{height: '100%', width: '100%'}}/>
+								<Icon sx={{ fontSize: { xs: "3rem" } }}>
+									<CompostIcon
+										style={{
+											height: "100%",
+											width: "100%",
+										}}
+									/>
 								</Icon>
 							</Box>
 							<Box>
 								<Typography
 									sx={{
-										fontSize: { xs: "1.2rem", md: "1.5rem" },
+										fontSize: {
+											xs: "1.2rem",
+											md: "1.5rem",
+										},
 										fontWeight: "bold",
 										mb: "0.5rem",
 									}}
@@ -431,18 +460,25 @@ export const Home = () => {
 								sx={{
 									height: { xs: "50px", md: "70px" },
 									width: { xs: "70%", md: "70px" },
-									m: {xs: '0', md:"auto"},
-									
+									m: { xs: "0", md: "auto" },
 								}}
 							>
-								<Icon sx={{fontSize: {xs:'3rem'}}}>
-									<SoupKitchenIcon style={{height: '100%', width: '100%'}}/>
+								<Icon sx={{ fontSize: { xs: "3rem" } }}>
+									<SoupKitchenIcon
+										style={{
+											height: "100%",
+											width: "100%",
+										}}
+									/>
 								</Icon>
 							</Box>
 							<Box>
 								<Typography
 									sx={{
-										fontSize: { xs: "1.2rem", md: "1.5rem" },
+										fontSize: {
+											xs: "1.2rem",
+											md: "1.5rem",
+										},
 										fontWeight: "bold",
 										mb: "0.5rem",
 									}}
@@ -477,18 +513,25 @@ export const Home = () => {
 								sx={{
 									height: { xs: "50px", md: "70px" },
 									width: { xs: "70%", md: "70px" },
-									m: {xs: '0', md:"auto"},
-									
+									m: { xs: "0", md: "auto" },
 								}}
 							>
-								<Icon sx={{fontSize: {xs:'3rem'}}}>
-									<CurrencyRupeeIcon style={{height: '100%', width: '100%'}}/>
+								<Icon sx={{ fontSize: { xs: "3rem" } }}>
+									<CurrencyRupeeIcon
+										style={{
+											height: "100%",
+											width: "100%",
+										}}
+									/>
 								</Icon>
 							</Box>
 							<Box>
 								<Typography
 									sx={{
-										fontSize: { xs: "1.2rem", md: "1.5rem" },
+										fontSize: {
+											xs: "1.2rem",
+											md: "1.5rem",
+										},
 										fontWeight: "bold",
 										mb: "0.5rem",
 									}}
@@ -621,7 +664,7 @@ export const Home = () => {
 
 			<Box
 				sx={{
-					py: { xs: "2rem", md: "3rem" },
+					py: { xs: "2rem", md: "4rem" },
 				}}
 			>
 				<Box
@@ -630,7 +673,7 @@ export const Home = () => {
 						flexDirection: "column",
 						alignItems: "center",
 						gap: "1rem",
-						p: { xs: "1rem", md: "4rem" },
+						p: { xs: "1rem", md: "2rem" },
 					}}
 				>
 					<Typography
@@ -639,7 +682,7 @@ export const Home = () => {
 							fontWeight: "bold",
 						}}
 						data-aos="fade-up"
-					data-aos-duration="700"
+						data-aos-duration="700"
 					>
 						Our Best Products
 					</Typography>
@@ -651,56 +694,34 @@ export const Home = () => {
 							textAlign: "center",
 						}}
 						data-aos="fade-up"
-					data-aos-duration="700"
+						data-aos-duration="700"
 					>
 						We have a wide range of spices which you can find here
 						at a reasonable price and quality
 					</Typography>
 				</Box>
-				<Box
+				<Link to="/products" style={{textDecoration: 'none', color: 'inherit'}}>
+				<Typography sx={{width:'90%', m: 'auto', textDecoration: 'underline', cursor: 'pointer', textAlign: 'right', fontSize: {xs: '0.8rem', md: '1rem'}}}>More Products &gt;</Typography>
+				</Link>
+				{ loading ? <Loader height="30vh"/> :<Box
 					sx={{
 						display: "flex",
 						flexWrap: "wrap",
-						justifyContent: "center",
-						width: { xs: "100%", md: "95%" },
+						justifyContent: "space-between",
+						width: { xs: "100%", md: "90%" },
+						gap: { xs: "1rem", md: "1rem" },
 						m: "auto",
-						gap: {xs:"1rem", md:"2rem"},
 						mt: "2rem",
+
 					}}
 				>
-				
-						<ProductCard
-							image="https://images.unsplash.com/photo-1642255521852-7e7c742ac58f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8R3JlZW4lMjBjYXJkYW1vbXxlbnwwfHwwfHx8MA%3D%3D"
-							name="Green cardamom 8+mm"
-							price="199"
-							grams="50"
-							about="Handpicked Kerala green cardamom, naturally dried, high oil content and long-lasting fragrance"
-						/>
-
-					<ProductCard
-						image="https://images.unsplash.com/photo-1591801058986-9e28e68670f7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QmxhY2slMjBwZXBwZXJ8ZW58MHx8MHx8fDA%3D"
-						name="Black pepper"
-						price="49"
-						grams="50"
-						about="Kerala black pepper, sun-dried whole peppercorns with sharp pungency and strong flavour"
-					/>
-
-					<ProductCard
-						image="https://images.unsplash.com/photo-1587131782738-de30ea91a542?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Q2lubmFtb24lMjBzdGlja3xlbnwwfHwwfHx8MA%3D%3D"
-						name="Cinnamon stick"
-						price="48"
-						grams="50"
-						about="True cinnamon sticks, sweet woody aroma, suitable for gravies, tea and desserts"
-					/>
-
-					<ProductCard
-						image="https://media.istockphoto.com/id/1365999568/photo/bay-leaf-in-a-bowl-on-wooden-background.jpg?s=612x612&w=0&k=20&c=rAMiGpiiZmOr9PwjwWaZGYIbtBr8x_vCXAv-4Gzhrxc="
-						name="Bay leaf"
-						price="49"
-						grams="50"
-						about="Naturally dried Indian bay leaves, mild aroma for curries and rice dishes"
-					/>
-				</Box>
+					{filteredProducts.map((product, index) => (
+						<Box sx={{width: {xs: '90%', md:'50%', lg:'22%'}}}>
+							
+						<ProductPageCard product={product} />
+						</Box>
+					))}
+				</Box>}
 			</Box>
 
 			<Footer />
