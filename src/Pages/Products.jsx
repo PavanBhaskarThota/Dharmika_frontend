@@ -57,10 +57,10 @@ export const Products = () => {
 		setFilteredProducts(updatedProducts);
 	}, [products, search, sortBy]);
 
-	if (loading) return <Loader height="80vh" />;
+	if (loading) return <Loader height="70vh" />;
 
 	return (
-		<Box sx={{ mt: "2rem", pb: "3rem" }}>
+		<Box sx={{ mt: {xs: "1.5rem", md: "2rem"}, pb: "3rem" }}>
 			<Box
 				sx={{
 					display: "flex",
@@ -163,14 +163,14 @@ export const Products = () => {
             flexWrap: "wrap",
             gap: { xs: "1rem", md: "1rem" },
 						justifyContent: { xs: "center", md: "start" },
-						mt: "2rem",
+						mt: "1rem",
 					}}
 				>
 					{filteredProducts.map((product, index) => (
 						<Box
 							item
 							key={index}
-							sx={{ width: { xs: "90%", md: "30%", lg: "24%" } }}
+							sx={{ width: { xs: "95%", md: "30%", lg: "24%" } }}
 						>
 							<ProductCard product={product} />
 						</Box>

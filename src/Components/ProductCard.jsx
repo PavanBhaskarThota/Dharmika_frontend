@@ -73,7 +73,7 @@ export const ProductCard = ({ product }) => {
 				<Fade in timeout={700} key={imageIndex}>
 					<CardMedia
 						component="img"
-						height="200"
+						height="220"
 						image={images[imageIndex]}
 						alt={name}
 						sx={{ objectFit: "cover" }}
@@ -198,7 +198,7 @@ export const ProductCard = ({ product }) => {
 							</Typography>
 						</Box>
 					</Box>
-
+					<Divider />
 					{description && (
 						<Box
 							sx={{
@@ -207,7 +207,6 @@ export const ProductCard = ({ product }) => {
 								"&::-webkit-scrollbar": { display: "none" },
 							}}
 						>
-							<Divider />
 							<Typography
 								variant="body2"
 								color="text.secondary"

@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Icon, Typography } from "@mui/material";
+import { Box, Button, Icon, Typography } from "@mui/material";
 import allSpices from "../assets/homeImages/spicesJar.png";
 import spiceBg1 from "../assets/homeImages/spiceBg1.png";
 import spiceBg2 from "../assets/homeImages/spiceBg2.png";
@@ -34,6 +34,14 @@ export const Home = () => {
 	useEffect(() => {
 		Aos.init();
 	});
+
+	const handleLinkClick = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: "smooth",
+		});
+	};
+
 	return (
 		<main>
 			<Box
@@ -42,7 +50,7 @@ export const Home = () => {
 					gap: { xs: "0.5rem", md: "2rem" },
 					color: "#1F3D2B",
 					padding: { xs: "1rem 1rem", md: "0" },
-					height: { xs: "89vh", md: "91vh" },
+					height: { xs: "90vh", md: "91vh" },
 					flexDirection: { xs: "column", md: "row" },
 					width: { xs: "90%", md: "90%" },
 					margin: { xs: "0 auto", md: "auto" },
@@ -713,6 +721,7 @@ export const Home = () => {
 						}}
 						data-aos="fade-up"
 						data-aos-duration="700"
+						onClick={handleLinkClick}
 					>
 						More Products &gt;
 					</Typography>
@@ -728,7 +737,7 @@ export const Home = () => {
 							width: { xs: "100%", md: "90%" },
 							gap: { xs: "1rem", md: "1rem" },
 							m: "auto",
-							mt: "2rem",
+							mt: "1rem",
 						}}
 					>
 						{filteredProducts.map((product, index) => (
