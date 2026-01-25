@@ -700,28 +700,52 @@ export const Home = () => {
 						at a reasonable price and quality
 					</Typography>
 				</Box>
-				<Link to="/products" style={{textDecoration: 'none', color: 'inherit'}}>
-				<Typography sx={{width:'90%', m: 'auto', textDecoration: 'underline', cursor: 'pointer', textAlign: 'right', fontSize: {xs: '0.8rem', md: '1rem'}}}>More Products &gt;</Typography>
-				</Link>
-				{ loading ? <Loader height="30vh"/> :<Box
-					sx={{
-						display: "flex",
-						flexWrap: "wrap",
-						justifyContent: "space-between",
-						width: { xs: "100%", md: "90%" },
-						gap: { xs: "1rem", md: "1rem" },
-						m: "auto",
-						mt: "2rem",
-
-					}}
+				<Link
+					to="/products"
+					style={{ textDecoration: "none", color: "inherit" }}
 				>
-					{filteredProducts.map((product, index) => (
-						<Box sx={{width: {xs: '90%', md:'50%', lg:'22%'}}}>
-							
-						<ProductPageCard product={product} />
-						</Box>
-					))}
-				</Box>}
+					<Typography
+						sx={{
+							width: "90%",
+							m: "auto",
+							textDecoration: "underline",
+							cursor: "pointer",
+							textAlign: "right",
+							fontSize: { xs: "0.8rem", md: "1rem" },
+						}}
+						data-aos="fade-up"
+						data-aos-duration="700"
+					>
+						More Products &gt;
+					</Typography>
+				</Link>
+				{loading ? (
+					<Loader height="30vh" />
+				) : (
+					<Box
+						sx={{
+							display: "flex",
+							flexWrap: "wrap",
+							justifyContent: "space-between",
+							width: { xs: "100%", md: "90%" },
+							gap: { xs: "1rem", md: "1rem" },
+							m: "auto",
+							mt: "2rem",
+						}}
+					>
+						{filteredProducts.map((product, index) => (
+							<Box
+								sx={{
+									width: { xs: "85%", md: "50%", lg: "22%" },
+									m: 'auto'
+								}}
+
+							>
+								<ProductPageCard product={product} />
+							</Box>
+						))}
+					</Box>
+				)}
 			</Box>
 
 			<Footer />
