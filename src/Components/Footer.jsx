@@ -44,8 +44,8 @@ export const Footer = () => {
 								src="/dharmika_logo.svg"
 								alt="logo"
 								style={{
-									width: "50px",
-									height: "50px",
+									width: "60px",
+									height: "60px",
 									backgroundColor: "#F5FBE6",
 									borderRadius: "50%",
 								}}
@@ -105,16 +105,16 @@ export const Footer = () => {
 						<Link to="/" style={{ color: "#f5f3ee" }}>
 							Home
 						</Link>
-						<Link to="/Products" style={{ color: "#f5f3ee" }}>
+						<Link to="/products" style={{ color: "#f5f3ee" }}>
 							Products
 						</Link>
-						<Link to="/About" style={{ color: "#f5f3ee" }}>
+						<Link to="/about" style={{ color: "#f5f3ee" }}>
 							About
 						</Link>
-						<Link to="/FAQ" style={{ color: "#f5f3ee" }}>
+						<Link to="/faq" style={{ color: "#f5f3ee" }}>
 							FAQ
 						</Link>
-						<Link to="/Contact" style={{ color: "#f5f3ee" }}>
+						<Link to="/contact" style={{ color: "#f5f3ee" }}>
 							Contact
 						</Link>
 					</Box>
