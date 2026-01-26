@@ -11,10 +11,10 @@ export const AllRoutes = () => {
     <Box sx={{pt: { xs: '58px', md: '72px'}}}>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/Products" element={<Products />} />
-      <Route path="/About" element={<About />} />
-      <Route path="/FAQ" element={<FAQ />} />
-      <Route path="/Contact" element={<Contact />} />
+      <Route path="/products" element={<Products />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/faq" element={<FAQ />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
     </Box>
       

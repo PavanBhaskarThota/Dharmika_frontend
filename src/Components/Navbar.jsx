@@ -55,7 +55,7 @@ export const Navbar = () => {
 			</Box>
 			<Divider />
 			<List>
-				{["Home", "Products", "About", "FAQ", "Contact"].map(
+				{["Home", "products", "about", "faq", "contact"].map(
 					(text, index) => (
 						<Link
 							to={text === "Home" ? "/" : `/${text}`}
@@ -102,14 +102,14 @@ export const Navbar = () => {
 					<Link to="/" onClick={handleLinkClick}>
 						Home
 					</Link>
-					<Link to="/Products">Products</Link>
-					<Link to="/About">About</Link>
+					<Link to="/products">Products</Link>
+					<Link to="/about">About</Link>
 					<Link to="/" onClick={handleLinkClick}>
 						<h1>DHARMIKA SPICES</h1>
 					</Link>
-					<Link to="/FAQ">Chef</Link>
-					<Link to="/FAQ">FAQ</Link>
-					<Link to="/Contact">Contact</Link>
+					<Link to="/faq">Chef</Link>
+					<Link to="/faq">FAQ</Link>
+					<Link to="/contact">Contact</Link>
 				</div>
 				<div>
 					<a
@@ -129,13 +129,29 @@ export const Navbar = () => {
 						sx={{ fontSize: "2rem" }}
 					/>
 				</div>
-				<Box>
-					<Link to="/" onClick={handleLinkClick}>
+				<Link to="/" onClick={handleLinkClick}>
+					<Box
+						sx={{
+							display: "flex",
+							alignItems: "center",
+						}}
+
+						id="brandLogo"
+					>
+						<img
+							src="/dharmika_logo.svg"
+							alt="logo"
+							style={{
+								width: "30px",
+								height: "30px",
+								borderRadius: "50%",
+							}}
+						/>
 						<Typography variant="h6" sx={{ fontFamily: "serif" }}>
 							DHARMIKA
 						</Typography>
-					</Link>
-				</Box>
+					</Box>
+				</Link>
 				<div>
 					<a
 						style={{ color: "#075e54" }}
@@ -243,6 +259,10 @@ const NavBar = styled.nav`
 	div {
 		display: flex;
 		gap: 1rem;
+	}
+
+	#brandLogo {
+		gap: 0.5rem
 	}
 
 	@media screen and (max-width: 768px) {
