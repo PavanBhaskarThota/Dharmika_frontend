@@ -44,24 +44,23 @@ export const Navbar = () => {
 		>
 			<Box
 				sx={{
-					minHeight: "66px",
-					maxHeight: "72px",
+					height: { xs: '58px', md: '72px'},
 					display: "flex",
 					alignItems: "center",
-					paddingLeft: "4.5rem",
+					paddingLeft: "5.5rem",
 				}}
 			>
 				Menu
 			</Box>
-			<Divider />
+			<Divider color={"#f5f3ee"}/>
 			<List>
-				{["Home", "products", "about", "faq", "contact"].map(
+				{["Home", "Products", "About", "FAQ", "Contact"].map(
 					(text, index) => (
 						<Link
-							to={text === "Home" ? "/" : `/${text}`}
+							to={text === "Home" ? "/" : `/${text.toLocaleLowerCase()}`}
 							style={{ textDecoration: "none" }}
 						>
-							<ListItem key={text} disablePadding>
+							<ListItem key={text}  >
 								<ListItemButton
 									sx={{
 										color: "#f5f3ee",
