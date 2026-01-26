@@ -35,7 +35,7 @@ export const Navbar = () => {
 
 	const DrawerList = (
 		<Box
-			sx={{ width: 250 }}
+			sx={{ width: 280 }}
 			role="presentation"
 			onClick={toggleDrawer(false)}
 			backgroundColor="#1F3D2B"
