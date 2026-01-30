@@ -179,9 +179,9 @@ export const Footer = () => {
 				<Typography sx={{ fontSize: "0.6rem", color: "lightgray" }}>
 					© 2026 Dharmika Spices. All rights reserved.
 				</Typography>
-				<Typography sx={{ fontSize: "0.6rem", color: "lightgray" }}>
+				{/* <Typography sx={{ fontSize: "0.6rem", color: "lightgray" }}>
 					Crafted with care by the Dharmika Team.
-				</Typography>
+				</Typography> */}
 			</Box>
 		</Box>
 	);
