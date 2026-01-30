@@ -143,12 +143,12 @@ export const Products = () => {
 							<MenuItem value={"byPriceHigh"}>
 								Price high to low
 							</MenuItem>
-							<MenuItem value={"byWeightLow"}>
+							{/* <MenuItem value={"byWeightLow"}>
 								Weight low to high
 							</MenuItem>
 							<MenuItem value={"byWeightHigh"}>
 								Weight high to low
-							</MenuItem>
+							</MenuItem> */}
 						</Select>
 					</FormControl>
 				</Box>
